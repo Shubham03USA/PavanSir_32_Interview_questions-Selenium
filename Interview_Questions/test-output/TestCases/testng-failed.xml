@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestCases]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Testing on chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="ParallelAndCross.TestCase_2">
+        <methods>
+          <include name="Lounch"/>
+          <include name="seachBox"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- ParallelAndCross.TestCase_2 -->
+      <class name="ParallelAndCross.TestCase_1">
+        <methods>
+          <include name="Lounch"/>
+          <include name="Login"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- ParallelAndCross.TestCase_1 -->
+    </classes>
+  </test> <!-- Testing on chrome(failed) -->
+</suite> <!-- Failed suite [TestCases] -->

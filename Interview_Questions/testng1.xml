@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="GrpTesting">
+  <test thread-count="5" name="GroupingTest">
+  <groups>
+  <run>
+  <include name="smoke"></include>
+  <include name="integration"></include>
+  </run>
+  </groups>
+    <classes>
+      <class name="Test_Case_Grouping_Concept.Grouping"/>
+    </classes>
+  </test> <!-- GroupingTest -->
+</suite> <!-- GrpTesting -->
