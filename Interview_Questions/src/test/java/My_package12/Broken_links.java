@@ -1,5 +1,6 @@
 package My_package12;
 
+import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
@@ -32,28 +33,29 @@ public class Broken_links {
 				System.out.println("URL is empty");
 				continue;
 			}
-			
-			URL li = new URL(url);
-			
-			HttpURLConnection httpcon = (HttpURLConnection) li.openConnection(); 
-			httpcon.connect();
-			
-			if(httpcon.getResponseCode() >= 400)
+			URL li = new URL(url);			
+			try 
 			{
-				System.out.println("Is broken links = "+httpcon.getResponseCode()+" == "+url);
-				brokenlinks++;
-			}
-			else
+				HttpURLConnection httpcon = (HttpURLConnection) li.openConnection(); 
+				httpcon.connect();
+				
+				if(httpcon.getResponseCode() >= 400)
+				{
+					System.out.println(httpcon.getResponseCode()+"  is "+"Broken links = "+url);
+					brokenlinks++;
+				}
+				else
+				{
+					System.out.println(httpcon.getResponseCode()+" is "+"Is valid links = "+url);
+				}				
+			} 
+			catch (Exception e)
 			{
-				System.out.println("Is valid links = "+httpcon.getResponseCode()+" == "+url);
-			}
-			
-		}
-		
+				e.printStackTrace();
+			}		
+		}		
 		System.out.println("Number of Broken links = "+brokenlinks);
 		Thread.sleep(3000);
 		driver.close();
-
 	}
-
 }

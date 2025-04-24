@@ -27,7 +27,7 @@ public class Explicit_Wait {
 		driver.findElement(By.name("q")).sendKeys("Selenium");
 		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
 		
-		WebElement element = mywait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='WebDriver']")));
+		WebElement element = mywait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//b[normalize-space()='WebDriver']")));
 
 		element.click();
 		driver.close();

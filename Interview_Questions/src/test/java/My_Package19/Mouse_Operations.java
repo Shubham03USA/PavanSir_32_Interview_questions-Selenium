@@ -23,7 +23,7 @@ public class Mouse_Operations {
 		WebElement btn = driver.findElement(By.xpath("//span[@class='context-menu-one btn btn-neutral']"));		
 		
 		Actions act = new Actions(driver);
-		act.contextClick(btn).perform();
+		act.contextClick(btn).perform(); // right click
 		
 		Thread.sleep(3000);	
 		driver.close();

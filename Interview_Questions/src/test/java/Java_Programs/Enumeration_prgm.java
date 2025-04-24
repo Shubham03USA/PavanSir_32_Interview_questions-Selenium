@@ -25,9 +25,6 @@ public class Enumeration_prgm {
 			System.out.println(" ==>  " + e.nextElement());
 
 		}
-		
-		
-
 	}
 
 }

@@ -12,8 +12,6 @@ public class TestCase_2 extends LounchQuit
 	{
 		WebElement searchbox = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
 		searchbox.sendKeys("shoes");
-		searchbox.sendKeys(Keys.ENTER);
-		
+		searchbox.sendKeys(Keys.ENTER);		
 	}
-
 }

@@ -22,7 +22,7 @@ public class File_Downloading {
 		
 		//For chrome
 		
-		HashMap preferences = new HashMap();
+		HashMap<String, String> preferences = new HashMap<String, String>();
 		preferences.put("download.default_directory",location);
 		
 		ChromeOptions opt = new ChromeOptions();

@@ -26,7 +26,4 @@ public class RetryAnalyzer implements IRetryAnalyzer
 		}
 		return false; // Stop retrying after maxRetryCount
 	}
-	
-	
-
 }

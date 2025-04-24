@@ -23,7 +23,7 @@ public class JavaScript_Executor_9 {
 		
 		WebElement Flash_logo = driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']"));
 
-		JavaScript_Util.flash(Flash_logo, driver);
+		JavaScript_Util.flash(Flash_logo, driver); //("arguments[0].style.backgroundColor = '" + color + "'" ,element);
 		
 		Thread.sleep(3000);
 		driver.quit();

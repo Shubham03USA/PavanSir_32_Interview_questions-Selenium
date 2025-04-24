@@ -28,6 +28,7 @@ public class Iframes {
 		//2nd iFrame
 		driver.switchTo().parentFrame();
 		driver.findElement(By.xpath("//a[@id='tryhome']")).click();
+		System.out.println("Comming to the main frame ");
 		driver.close();
 		Thread.sleep(3000);
 		

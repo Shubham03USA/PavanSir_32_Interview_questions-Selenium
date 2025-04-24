@@ -1,11 +1,17 @@
 package My_Package_7;
 
+import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -16,16 +22,32 @@ public class BootStrap_DropDown
 	public static void main(String[] args) throws Throwable 
 	{
 		// How to handle bootstrap dropDown
+		
+		ChromeOptions option = new ChromeOptions();
+		option.addArguments("--disable-notifications");
+		
+		// This will block all notifications
+		Map<String, Object> prefs = new HashMap<>();
+        prefs.put("profile.default_content_setting_values.notifications", 2);
+        prefs.put("profile.default_content_setting_values.geolocation", 2);
+        prefs.put("profile.default_content_setting_values.media_stream_mic", 2);
+        prefs.put("profile.default_content_setting_values.media_stream_camera", 2);
+        
+		option.setExperimentalOption("prefs", prefs);       
+		option.addArguments("--start-maximized"); // page maximize
+		
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		
+		driver = new ChromeDriver(option);
+		
 		driver.get("https://www.hdfcbank.com/");
 		driver.manage().window().maximize();
 		
 		// product type
-		WebElement product_type = driver.findElement(By.xpath("//div[@class='drp1']//div[@class='dropdown']"));
+		WebElement product_type = driver.findElement(By.xpath("//div[@class='drp1']"));//("//div[@class='drp1']//div[@class='dropdown']"));
 		product_type.click();
 		
-		List<WebElement> options = driver.findElements(By.xpath("//ul[@class='dropdown1 dropdown-menu']//li"));
+		List<WebElement> options = driver.findElements(By.xpath("//div[@class='drp1']//li"));   //("//ul[@class='dropdown1 dropdown-menu']//li"));
 		System.out.println("List of Options in Product type = "+ options.size());
 		
 		selectDrp(options, "Accounts");
@@ -45,10 +67,13 @@ public class BootStrap_DropDown
 		Thread.sleep(2000);
 		
 		// product
-		WebElement product = driver.findElement(By.xpath("//div[@class='drp2']//div[@class='dropdown']"));
-		product.click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 		
-		List<WebElement> product_list = driver.findElements(By.xpath("//ul[@class='dropdown2 dropdown-menu']//li")); 
+		WebElement products = driver.findElement(By.xpath("//div[@class='drp2']"));  //("//div[@class='drp2']//div[@class='dropdown']"));
+		wait.until(ExpectedConditions.elementToBeClickable(products));
+		products.click();
+		
+		List<WebElement> product_list = driver.findElements(By.xpath("//div[@class='drp2']//li"));//("//ul[@class='dropdown2 dropdown-menu']//li")); 
 		System.out.println("Product list = "+product_list.size());
 		
 		selectDrp(product_list, "Salary Accounts");
@@ -70,12 +95,12 @@ public class BootStrap_DropDown
 
 	
 	// suppose there will more drop down so we need to create one generic method
-	//Method ==> 2
+	//Method ==> 2 
 	public static void selectDrp(List<WebElement> ele, String value)
 	{
 		for (WebElement prd_list : ele) 
 		{
-			if(prd_list.getText().equalsIgnoreCase("value"))
+			if(prd_list.getText().equalsIgnoreCase(value))
 			{
 				prd_list.click();
 				break;

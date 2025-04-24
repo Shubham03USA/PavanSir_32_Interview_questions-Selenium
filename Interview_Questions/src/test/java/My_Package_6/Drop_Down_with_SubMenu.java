@@ -28,7 +28,7 @@ public class Drop_Down_with_SubMenu
 		
 		Actions act = new Actions(driver);
 		
-		WebElement ttp = driver.findElement(By.xpath("//li[@id='mci_Administrator']//a[@href='#'][normalize-space()='Administrator']"));
+		WebElement ttp = driver.findElement(By.id("mci_Administrator"));
 		
 		act.moveToElement(ttp).perform();
 		

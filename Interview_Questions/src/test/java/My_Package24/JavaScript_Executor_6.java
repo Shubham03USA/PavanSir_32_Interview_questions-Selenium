@@ -10,7 +10,7 @@ public class JavaScript_Executor_6 {
 
 	public static void main(String[] args) throws Throwable 
 	{
-		// Scrolling page up
+		// Scrolling page down
 	
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
@@ -19,7 +19,7 @@ public class JavaScript_Executor_6 {
 
 		Thread.sleep(3000);
 		
-		JavaScript_Util.scrollingUp(driver);
+		JavaScript_Util.scrollingUp(driver); //("window.scrollTo(0,document.body.scrollHeight)"
 		
 		Thread.sleep(3000);
 		driver.quit();

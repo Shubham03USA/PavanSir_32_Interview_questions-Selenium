@@ -18,9 +18,7 @@ public class Data_Driven_Testing
 		return new Object[][]
 		{ { "standard_user", "secret_sauce" }, { "standard_user2", "secret_sauce" } };
 	}
-	
-	
-	
+		
 	@Test (dataProvider = "testData")
 	public void testLogin(String username, String password) throws Throwable
 	{
@@ -38,5 +36,4 @@ public class Data_Driven_Testing
 		Thread.sleep(3000);
 		driver.close();
 	}
-
 }

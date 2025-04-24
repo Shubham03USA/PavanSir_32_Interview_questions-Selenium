@@ -19,7 +19,7 @@ public class Implicit_Waits {
 		driver.manage().window().maximize();
 		
 		//implicit wait
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 		driver.findElement(By.name("q")).sendKeys("Selenium");
 		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);

@@ -17,21 +17,18 @@ public class Demo_WebTable {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://money.rediff.com/index.html");
-		List<WebElement> row = driver.findElements(By.xpath("//div[@class='hmbseindicestable show']"));
-	    List<WebElement> col = driver.findElements(By.xpath("//div[@class='hmbseindicestable show']//ul//li"));
+		List<WebElement> row = driver.findElements(By.xpath("//div[@class='hmbseindicestable']"));
+	    List<WebElement> col = driver.findElements(By.xpath("//div[@class='hmbseindicestable']//ul//li"));
 		
 	    System.out.println("Size of rows = "+ row.size());
 	    System.out.println("Size of column = " + col.size());
 	    
-	    for(int i= 0;i<row.size();i++)
+	    for(int i=0;i<row.size();i++)
 	    {
-	    	System.out.println(row.get(i).getText());
-	    	
-	    }
-		
+	    	System.out.println("====> "+row.get(i).getText());	    	
+	    }		
 		Thread.sleep(3000);
 		driver.close();
-
 	}
 
 }

@@ -36,7 +36,7 @@ public class JavaScript_Executor_1 {
 		// drawing border 
 		
 		WebElement logo = driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']"));
-		JavaScript_Util.drawBorder(logo, driver);
+		JavaScript_Util.drawBorder(logo, driver); //("arguments[0].style.border = '3px solid red'", element);
 		
 		//taking screenshot
 		

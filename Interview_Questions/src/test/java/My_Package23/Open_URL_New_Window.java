@@ -21,7 +21,7 @@ public class Open_URL_New_Window {
 		
 		Thread.sleep(3000);
 		
-		driver.switchTo().newWindow(WindowType.WINDOW); // use window for new window
+		driver.switchTo().newWindow(WindowType.WINDOW); // use window for new windowType
 		
 		driver.get("https://jqueryui.com/tooltip/");
 		

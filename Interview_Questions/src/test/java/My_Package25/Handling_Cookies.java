@@ -27,8 +27,7 @@ public class Handling_Cookies
 		//Q. How to print cookies from browser?
 		for (Cookie ck : cookies) 
 		{
-			System.out.println(" ===> "+ck.getName() + " : "+ ck.getValue());
-			
+			System.out.println(" ===> "+ck.getName() + " : "+ ck.getValue());			
 		}
 		
 		//Q. How to add cookies to the browser?

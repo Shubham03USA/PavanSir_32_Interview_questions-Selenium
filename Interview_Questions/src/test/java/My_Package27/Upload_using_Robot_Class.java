@@ -70,10 +70,7 @@ public class Upload_using_Robot_Class {
 		rb.keyRelease(KeyEvent.VK_ENTER);// it will release ENTER button
 		rb.delay(2000);
 		
-		
 		driver.close();
-		
-
 	}
 
 }

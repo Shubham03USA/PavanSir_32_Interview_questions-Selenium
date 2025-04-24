@@ -30,7 +30,7 @@ public class DropDown {
 		
 		//s.selectByVisibleText("Aruba");	
 		//s.selectByValue("GRC"); // greece
-		//s.selectByIndex(15); // Azerbaijan
+		//s.selectByIndex(15); // Azerbaijan and always starts with 0 index
 		
 		//===> select option without using select class methods
 		
@@ -38,9 +38,11 @@ public class DropDown {
 
 			for (WebElement options : alloptn) 
 			{
-				if (options.getText().equals("Azerbaijan")) 
+				System.out.println("All options :"+options.getText());
+				if (options.getText().equals("Cyprus")) 
 				{
 					options.click();
+					System.out.println("Option is selected ");
 					break;
 				}
 			}

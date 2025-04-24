@@ -27,15 +27,13 @@ public class Lounch_Amazon_By_MouseOver
 		
 		WebElement link = driver.findElement(By.xpath("//a[@id='nav-link-accountList']"));
 		act.moveToElement(link).perform();
+		System.out.println("Moving to account and sign up box");
 		
 		WebElement sigin = driver.findElement(By.xpath("//span[@class='nav-action-inner']"));
 		sigin.click();
+		System.out.println("Clicking on sign up button...");
 				
 		Thread.sleep(3000);
 		driver.close();
-		
-		
-
 	}
-
 }

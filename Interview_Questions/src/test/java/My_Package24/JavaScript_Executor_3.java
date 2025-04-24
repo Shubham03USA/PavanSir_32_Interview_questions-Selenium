@@ -20,7 +20,7 @@ public class JavaScript_Executor_3 {
 		// perform Click action
 		
 		WebElement register = driver.findElement(By.xpath("//a[normalize-space()='Register']"));	
-		JavaScript_Util.clickElementByJs(register, driver);
+		JavaScript_Util.clickElementByJs(register, driver); //("arguments[0].click();", element);
 
 		Thread.sleep(3000);
 		driver.close();

@@ -19,7 +19,7 @@ public class JavaScript_Executor_5 {
 		
 		Thread.sleep(3000);
 
-		JavaScript_Util.refreshPageJs(driver);
+		JavaScript_Util.refreshPageJs(driver); //("history.go(0)");
 		
 		Thread.sleep(3000);
 		driver.quit();

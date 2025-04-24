@@ -19,7 +19,10 @@ public class JavaScript_Executor_8 {
 		
 		Thread.sleep(3000);
 		
-		JavaScript_Util.ZoomingPageByJs(driver);
+		JavaScript_Util.ZoomingPageByJs(driver); 
+		//for zoom out =>("document.body.style.zoom = '150%'");
+		//for zoom in =>("document.body.style.zoom = '50%'");
+		//for normal page  =>("document.body.style.zoom = '100%'");
 		
 		Thread.sleep(3000);
 		driver.quit();

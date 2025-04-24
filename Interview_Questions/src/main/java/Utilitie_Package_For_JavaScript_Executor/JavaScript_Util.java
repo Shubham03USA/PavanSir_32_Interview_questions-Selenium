@@ -52,12 +52,16 @@ public class JavaScript_Util
 	public static void ZoomingPageByJs(WebDriver driver)
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("document.body.style.zoom = '150%'"); // zoom out by 100%
+		js.executeScript("document.body.style.zoom = '150%'"); 
+		
+		// for zoom out =>("document.body.style.zoom = '150%'");
+		// for zoom in =>("document.body.style.zoom = '50%'");
+		//for normal page  =>("document.body.style.zoom = '100%'");
+				
 	}
 	
 	public static void flash(WebElement element, WebDriver driver)
 	{
-		JavascriptExecutor js = (JavascriptExecutor) driver;
 		String bgcolor = element.getCssValue("backgroundColor");
 		
 		for(int i=0;i<50;i++)
@@ -72,7 +76,7 @@ public class JavaScript_Util
 	public static void changeColor(String color, WebElement element, WebDriver driver)
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].style.backgroundColor = '" + color + "'" ,element);
+		js.executeScript("arguments[0].style.backgroundColor = '" + color + "'" ,element); // this is main
 		
 		try
 		{
@@ -83,5 +87,4 @@ public class JavaScript_Util
 			
 		}
 	}
-
 }

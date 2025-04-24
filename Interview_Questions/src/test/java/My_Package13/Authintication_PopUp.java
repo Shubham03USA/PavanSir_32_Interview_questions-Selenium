@@ -1,5 +1,7 @@
 package My_Package13;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -19,7 +21,7 @@ public class Authintication_PopUp {
 		//Authentication pop up
 		driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");// it will login directly
 
-		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.close();
 	}
 

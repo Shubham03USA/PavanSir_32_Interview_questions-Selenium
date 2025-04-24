@@ -26,9 +26,9 @@ public class Jquery_DropDown
 		
 		//MultiSelectionOption(driver, "choice 1");
 		
-		//MultiSelectionOption(driver, "choice 1","choice 2","choice 2 1");
+		MultiSelectionOption(driver, "choice 1","choice 2","choice 2 3");
 
-		MultiSelectionOption(driver, "all");
+		//MultiSelectionOption(driver, "all");
 
 		Thread.sleep(3000);
 		driver.close();
@@ -46,6 +46,7 @@ public class Jquery_DropDown
 			for (WebElement item : optList) 
 			{
 				String text = item.getText();
+				System.out.println("Option List :"+text);
 				
 				for (String val : value) 
 				{
@@ -53,8 +54,7 @@ public class Jquery_DropDown
 					{
 						item.click();
 						break;
-					}
-					
+					}					
 				}
 			}
 		}
@@ -71,9 +71,6 @@ public class Jquery_DropDown
 			{
 				//System.out.println(e.getMessage());
 			}
-		}
-			
-		
+		}	
 	}
-
 }

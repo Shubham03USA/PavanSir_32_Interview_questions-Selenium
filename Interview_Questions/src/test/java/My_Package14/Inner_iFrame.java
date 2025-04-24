@@ -20,13 +20,12 @@ public class Inner_iFrame {
 		
 		//Outer iFrame
 		
-		
 		WebElement outer_iframe = driver.findElement(By.xpath("//*[@id='Multiple']/iframe"));
 		driver.switchTo().frame(outer_iframe); // we are passing frame as webElement
 		Thread.sleep(3000);
 		
 		// inneriFrmae
-		WebElement inner_iframe = driver.findElement(By.xpath("/html/body/section/div/div/iframe"));
+		WebElement inner_iframe = driver.findElement(By.xpath("//div[@class='iframe-container']//iframe"));
 		driver.switchTo().frame(inner_iframe);
 		Thread.sleep(3000);
 	

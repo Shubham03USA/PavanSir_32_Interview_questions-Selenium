@@ -30,7 +30,6 @@ public class Handle_Checkbox {
 		for(int i=0; i<=multiCheckBox.size();i++)
 		{
 			multiCheckBox.get(i).click();
-		
 		}
 */		
 		
@@ -60,10 +59,7 @@ public class Handle_Checkbox {
 				multiCheckBox.get(i).click();
 			}
 		}
-		
 		Thread.sleep(3000);
 		driver.close();
-
 	}
-
 }

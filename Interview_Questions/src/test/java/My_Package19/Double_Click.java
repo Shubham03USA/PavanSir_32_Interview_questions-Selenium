@@ -36,7 +36,5 @@ public class Double_Click {
 		
 		Thread.sleep(2000);			
 		driver.close();
-
 	}
-
 }

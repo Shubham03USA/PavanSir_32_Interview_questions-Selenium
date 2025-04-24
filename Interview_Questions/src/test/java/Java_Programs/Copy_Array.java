@@ -26,7 +26,5 @@ public class Copy_Array {
 		}
 		
 		System.out.println("Copyed one array to another array = "+Arrays.toString(test2));
-
 	}
-
 }

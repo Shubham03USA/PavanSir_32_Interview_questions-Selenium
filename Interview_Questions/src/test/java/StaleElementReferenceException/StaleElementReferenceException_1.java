@@ -44,11 +44,7 @@ public class StaleElementReferenceException_1
 		input.sendKeys("Mobiles");
 
 		Thread.sleep(3000);
-		driver.close();
+		driver.quit();
 		
-	}
-	
-	
-	
-	
+	}	
 }

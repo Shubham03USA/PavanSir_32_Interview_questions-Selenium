@@ -28,6 +28,7 @@ public class Demo_WebTable_Print_on_Console {
 		for(int i=0;i<row.size();i++) // Row = it will print entire data of the table
 		{
 			System.out.println("Print the table row = "+row.get(i).getText());
+			System.out.println(" ");
 		}
 		
 //		List<WebElement> column = driver.findElements(By.xpath("//table[@class='dataTable']//tr[1]//th"));

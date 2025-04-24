@@ -41,6 +41,9 @@ public class Sorted_DropDown {
 		}
 		Collections.sort(Temp_al);
 		System.out.println("temp === "+Temp_al);
+		
+		Collections.sort(Org_al);
+		System.out.println("Org = "+ Org_al);
 
 		Thread.sleep(3000);
 		driver.close();

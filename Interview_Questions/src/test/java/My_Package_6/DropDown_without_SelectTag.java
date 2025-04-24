@@ -1,5 +1,6 @@
 package My_Package_6;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -20,23 +21,25 @@ public class DropDown_without_SelectTag
 		driver = new ChromeDriver();
 		driver.get("https://demoqa.com/select-menu");
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
 		// drop down = 1
-		WebElement value = driver.findElement(By.xpath("//div[@id='withOptGroup']"));
-		value.click();
+		//WebElement value =
+				driver.findElement(By.xpath("//div[@id='withOptGroup']")).click();
+		//value.click();
 		
 		List<WebElement> value_list = driver.findElements(By.xpath("//div[@class=' css-26l3qy-menu']//div[@id='react-select-2-option-2']"));
 		System.out.println("List of values = "+value_list.size());
 		
 		selectMultipleDrp(value_list, "A root option");
 
-		
 		Thread.sleep(3000);
 
 		// drop down = 2
 		
-		WebElement one = driver.findElement(By.xpath("//div[@id='selectOne']"));
-		one.click();
+		//WebElement one = 
+				driver.findElement(By.xpath("//div[@id='selectOne']")).click();
+		//one.click();
 		
 		List<WebElement> one_list = driver.findElements(By.xpath("//div[@class=' css-1s9izoc']//div"));
 		System.out.println("List of Option = "+one_list.size());

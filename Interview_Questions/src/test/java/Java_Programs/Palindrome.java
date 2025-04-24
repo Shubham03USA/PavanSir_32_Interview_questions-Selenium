@@ -29,7 +29,6 @@ public class Palindrome {
 		{
 			System.out.println("Number is not  Palindrome");
 		}
-
 	}
 
 }

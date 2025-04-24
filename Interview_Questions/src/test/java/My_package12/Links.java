@@ -25,16 +25,20 @@ public class Links {
 		
 		List<WebElement> all_inks =  driver.findElements(By.tagName("a"));
 		System.out.println("Number of links = "+ all_inks.size());
-		
+	/*	
 		for(int i=0;i<=all_inks.size();i++)
 		{
 			System.out.println(all_inks.get(i).getText());
 			System.out.println(all_inks.get(i).getAttribute("href"));
 		}
-		
+	 */	
+		for (WebElement links : all_inks) 
+		{
+			System.out.println("Name of Link = " +links.getText());
+			System.out.println("Actual Links = "+links.getAttribute("href"));	
+		}
 		Thread.sleep(3000);
 		driver.close();
-
 	}
 
 }

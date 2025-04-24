@@ -20,15 +20,12 @@ public class Car
 	{
 		this.displayInfo(this);
 	}
-	
 
 	public static void main(String[] args) 
 	{
 		Car c = new Car();
 		c.setModel("Audi");
 		c.invokeDisplayInfo();
-
 	}
-	
 }
 

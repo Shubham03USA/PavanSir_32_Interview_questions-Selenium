@@ -3,6 +3,7 @@ package My_package11;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -17,6 +18,11 @@ public class Get_Window_Handles
 		
 		driver.get("http://orangehrm.qedgetech.com/symfony/web/index.php/auth/login");
 		driver.manage().window().maximize();
+		
+		// scroll down
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("window.scrollTo(0,document.body.scrollHeight);"); // go down
+		js.executeScript("window.scrollBy(0,500)"); // go down
 		
 		Thread.sleep(3000);
 		
@@ -38,22 +44,17 @@ public class Get_Window_Handles
 			if(!handle.equals(original_Window))
 			{
 				driver.switchTo().window(handle);
-				System.out.println("Switch to new window/tab");
-				break;
+				System.out.println("New window title : "+ driver.getTitle());			
 			}
 		}
-		System.out.println("New window title : "+ driver.getTitle());
 		
 		//switch to original window
-		
+
 		driver.switchTo().window(original_Window);
-		
+		js.executeScript("window.scrollBy(0,-500)"); // go up		
 		Thread.sleep(3000);
-		
 		System.out.println("Switch back to original window ...");
-			
 		driver.quit();
-		
 	}
 
 }

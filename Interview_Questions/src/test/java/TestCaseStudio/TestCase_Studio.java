@@ -38,10 +38,7 @@ public class TestCase_Studio
 		driver.findElement(By.xpath("//input[@title=\"Edit test case name\"]")).sendKeys("Google Test Case");
 		driver.findElement(By.xpath("//button[@class='saveTestCaseBtn']")).click();
 		Thread.sleep(3000);
-		driver.quit();
-		
-		
-
+		driver.quit();		
 	}
 
 }

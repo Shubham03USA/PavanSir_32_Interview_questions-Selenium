@@ -23,8 +23,14 @@ public class Drag_and_Drop {
 		WebElement madrid = driver.findElement(By.xpath("//div[@id='box7']"));
 		WebElement Spain = driver.findElement(By.xpath("//div[@id='box107']"));
 		
+		WebElement Washington = driver.findElement(By.xpath("//div[@id='box3']"));
+		WebElement United_States = driver.findElement(By.xpath("//div[@id='box103']"));
+		
 		Actions act = new Actions(driver);
 		act.dragAndDrop(madrid, Spain).perform();
+		System.out.println("Cities are moved into Country");
+		
+		act.dragAndDrop(Washington, United_States).perform();
 		
         Thread.sleep(3000);	
 		driver.close();

@@ -24,30 +24,30 @@ public class GetTextandGetAttribute {
 //		email.sendKeys("abc@gmail.coop");
 //		email.clear();
 		
-		// how to capture the values from textBox which is already present in textBox
+		// how to capture the values from textBox which is already present in textBox => getAttribute("value")
 		
 		// using get attribute method
 		String captureEmail = driver.findElement(By.xpath("//input[@id='Email']")).getAttribute("value");
-		System.out.println("Alredy present value by getAttribute() = "+captureEmail);
+		System.out.println("Alredy present value captured by getAttribute() method  = " + captureEmail);
 		
 		// using get text method ==> we get empty value
 		String captureEmail1 = driver.findElement(By.xpath("//input[@id='Email']")).getText();
-		System.out.println("Alredy present value by getText() = "+captureEmail1);
+		System.out.println("Alredy present value by getText()is blank  = " + captureEmail1);
 		
 		//for login button using get text method
 		String loginbtn = driver.findElement(By.xpath("//button[normalize-space()='Log in']")).getText();
-		System.out.println("Getting text from button which is ="+loginbtn);
+		System.out.println("Getting text from button which is = " + loginbtn);
 		
 		//for login button using get attribute method
 		String loginbtn1 = driver.findElement(By.xpath("//button[normalize-space()='Log in']")).getAttribute("type");
-		System.out.println("Getting attribute value from button which is ="+loginbtn1);
+		System.out.println("Getting attribute value from button which is = " + loginbtn1);
 
 		String loginbtn2 = driver.findElement(By.xpath("//button[normalize-space()='Log in']")).getAttribute("class");
-		System.out.println("Getting attribute value from button which is ="+loginbtn2);
+		System.out.println("Getting attribute value from button which is = " + loginbtn2);
 
 		// getting title of the page
 		String title = driver.findElement(By.xpath("//div[@class='page-title']")).getText();
-		System.out.println("Page Title"+title);
+		System.out.println("Page Title : " + title);
 		Thread.sleep(3000);
 		driver.close();
 

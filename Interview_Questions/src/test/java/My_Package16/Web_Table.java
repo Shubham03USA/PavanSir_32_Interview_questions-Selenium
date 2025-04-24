@@ -50,7 +50,7 @@ public class Web_Table {
 			{
 				String data = driver.findElement(By.xpath("//div[@class='bd-example table-responsive']//tr["+(r)+"]//td["+(c)+"]")).getText();
 				
-				System.out.print(data+"    ");
+				System.out.print(data+"  ||  ");
 				
 			}
 			System.out.println();

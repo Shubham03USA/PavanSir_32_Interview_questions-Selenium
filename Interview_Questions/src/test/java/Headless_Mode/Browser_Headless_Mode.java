@@ -20,7 +20,7 @@ public class Browser_Headless_Mode {
 		
 		driver.get("https://www.saucedemo.com/");
 		Thread.sleep(3000);
-		System.out.println("Headless mode run successfuly ...");
+		System.out.println("Browser run Headless mode successfuly ...");
 		driver.close();
 		
 		

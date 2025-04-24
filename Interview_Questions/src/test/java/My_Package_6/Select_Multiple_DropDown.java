@@ -25,15 +25,19 @@ public class Select_Multiple_DropDown
 		
 		WebElement cars = driver.findElement(By.id("cars"));
 		selectOption(cars , "Audi");
+		System.out.println("Audi car is selected...");
 		Thread.sleep(2000);
 		
 		WebElement style = driver.findElement(By.id("oldSelectMenu"));
 	    selectOption(style, "Yellow");
+	    System.out.println("Yellow color is selected...");
 		Thread.sleep(2000);
 		
 		driver.close();
 
 	}
+	
+	// This is generic method we created for drop down
 	
 	public static void selectOption(WebElement ele, String value)
 	{
@@ -47,8 +51,7 @@ public class Select_Multiple_DropDown
 				opt.click();
 				break;
 			}
-			
-			
+						
 		}
 	}
 

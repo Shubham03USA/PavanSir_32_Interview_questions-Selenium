@@ -17,7 +17,7 @@ public class JavaScript_Executor_2
 		
 		//Capturing title 
 		
-		String title = JavaScript_Util.getTitleByJs(driver);
+		String title = JavaScript_Util.getTitleByJs(driver); //js.executeScript("return document.title;").toString();
 		System.out.println("Title of the page ==> "+title);
 
 		Thread.sleep(3000);

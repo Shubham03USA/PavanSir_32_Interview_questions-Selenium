@@ -31,9 +31,11 @@ public class Drag_and_Drop_img {
 		Actions act = new Actions(driver);
 		
 		act.dragAndDrop(img1, trash).perform();
+		System.out.println("Img1 was moved into trash can ");
 		Thread.sleep(2000);
 		
-		act.dragAndDrop(img2, trash).perform();;
+		act.dragAndDrop(img2, trash).perform();
+		System.out.println("Img2 was moved into trash can ");
         Thread.sleep(3000);	
         
 		driver.close();

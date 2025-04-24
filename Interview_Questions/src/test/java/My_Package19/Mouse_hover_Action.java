@@ -25,7 +25,7 @@ public class Mouse_hover_Action {
 		WebElement Resources = driver.findElement(By.xpath("//div[@id='w-dropdown-toggle-2']//div[contains(text(),'Resources')]"));
 		
 		Actions act = new Actions(driver);
-		act.moveToElement(customer).moveToElement(product).moveToElement(Resources).click().perform();
+		act.moveToElement(customer).moveToElement(product).moveToElement(Resources).click().build().perform();
 		
 		
 		Thread.sleep(3000);

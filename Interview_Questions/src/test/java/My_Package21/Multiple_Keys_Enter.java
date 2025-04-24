@@ -31,6 +31,7 @@ public class Multiple_Keys_Enter {
 		act.sendKeys("A");
 		act.keyUp(Keys.CONTROL);
 		act.perform();
+		System.out.println("ctrl + A ==> to select all...");
 		
 		
 		//ctrl + C  ==> to copy text
@@ -38,16 +39,19 @@ public class Multiple_Keys_Enter {
 		act.sendKeys("C");
 		act.keyUp(Keys.CONTROL);
 		act.perform();
+		System.out.println("ctrl + C  ==> to copy text");
 		
 	    // tab ==> to shift next box for paste
 		act.sendKeys(Keys.TAB);
 		act.perform();
+		System.out.println("tab ==> to shift next box for paste");
 		
 		//ctrl + V ==> to paste the selected text
 		act.keyDown(Keys.CONTROL);
 		act.sendKeys("v");
 		act.keyUp(Keys.CONTROL);
 		act.perform();
+		System.out.println("ctrl + V ==> to paste the selected text");
 		
 		//compare text 
 		if(input_box.getAttribute("value").equals(Output_box.getAttribute("value")))
@@ -63,5 +67,4 @@ public class Multiple_Keys_Enter {
 		driver.close();
 
 	}
-
 }

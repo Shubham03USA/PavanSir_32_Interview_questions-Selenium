@@ -11,7 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Perticular_Section_Screenshot {
+public class Perticular_Section_Screenshot
+{
 
 	public static void main(String[] args) throws Throwable 
 	{
@@ -24,13 +25,11 @@ public class Perticular_Section_Screenshot {
 	     WebElement specific = driver.findElement(By.xpath("//div[@class='footer-upper']"));
 	     
 	     File src = specific.getScreenshotAs(OutputType.FILE);
-	     File trg = new File("./ScreenShots/S_Section.png");
+	     File trg = new File("./ScreenShots/S_Section1.png");
 	     
 	     FileUtils.copyFile(src, trg);    
 	    
 	     Thread.sleep(3000);
 	     driver.close();
-
 	}
-
 }

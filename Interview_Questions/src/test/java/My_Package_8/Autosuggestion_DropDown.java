@@ -1,11 +1,15 @@
 package My_Package_8;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -16,16 +20,25 @@ public class Autosuggestion_DropDown
 	public static void main(String[] args) throws Throwable 
 	{
 		// AutoSuggestion DropDown
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-notifications");
+		
+		
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(options);
 		driver.get("https://www.google.com/");
+		driver.manage().window().maximize();
 		
-		WebElement data = driver.findElement(By.xpath("//textarea[@id='APjFqb']"));
-		data.sendKeys("TestNG Tutorial");
+		WebElement searchBox = driver.findElement(By.xpath("//textarea[@id='APjFqb']"));
+		searchBox.sendKeys("CR7");
 		
-		List<WebElement> listOpt = driver.findElements(By.xpath("//ul[@role='listbox']//li"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='mkHrUc']//li")));
+		
+		List<WebElement> listOpt = driver.findElements(By.xpath("//div[@class='mkHrUc']//li"));//("//ul[@role='listbox']//li"));
 		System.out.println("List of options = "+listOpt.size());
-/*		
+		
+		/*		
 		// method ====> 1
 		for(int i=1;i<=listOpt.size();i++)
 		{
@@ -45,18 +58,17 @@ public class Autosuggestion_DropDown
 */		
 		// method =====> 2
 		for (WebElement ele : listOpt) 
-		{
-			if(ele.getText().contains("testng tutorial w3schools"))
+		{	
+			String allopt = ele.getText();
+			System.out.println("Option names : "+allopt);
+			
+			if(allopt.equalsIgnoreCase("CR7 watch"))
 			{
 				ele.click();
 				break;
-			}
-			
-		}
-		
+			}	
+		}	
 		Thread.sleep(3000);
 		driver.close();
-
 	}
-
 }

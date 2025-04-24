@@ -25,7 +25,7 @@ public class Capture_ScreenShot_FullPage {
 	     TakesScreenshot ts = (TakesScreenshot)driver;
 	     
 	     File src = ts.getScreenshotAs(OutputType.FILE);
-	     File trg = new File("./ScreenShots/HomePage1.png");
+	     File trg = new File("./ScreenShots/HomePage2.png");
 	     
 	     FileUtils.copyFile(src, trg);
 	     

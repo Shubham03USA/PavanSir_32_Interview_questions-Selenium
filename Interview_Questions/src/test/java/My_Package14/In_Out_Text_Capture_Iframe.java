@@ -30,10 +30,8 @@ public class In_Out_Text_Capture_Iframe {
 		driver.switchTo().parentFrame(); // switch to outer frame or outer 
 		String outer_frame = driver.findElement(By.xpath("//p[normalize-space()='Use CSS width & height to specify the iframe size:']")).getText();
 		
-		System.out.println("outer_frame text = "+outer_frame);
+		System.out.println("Outer_frame text = "+outer_frame);
 		
 		driver.close();
-
 	}
-
 }

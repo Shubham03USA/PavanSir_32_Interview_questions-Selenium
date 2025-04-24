@@ -17,7 +17,6 @@ public class Date_Picker {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://demo.automationtesting.in/Datepicker.html");
 		driver.manage().window().maximize();
-
 		
 		String year = "2025";
 		String month = "May";
@@ -55,8 +54,7 @@ public class Date_Picker {
 				ele.click();
 				break;
 			}	
-		}
-	
+		}	
 		Thread.sleep(3000);
 		driver.close();
 	}

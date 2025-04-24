@@ -29,6 +29,8 @@ public class DOB_Picker {
 		
 		Select mn_drp = new Select(months);
 		mn_drp.selectByVisibleText("June");
+		System.out.println("Month is selected = June");
+		
 		
 		Thread.sleep(5000);
 		
@@ -38,7 +40,7 @@ public class DOB_Picker {
 		
 		 Select yr_drp = new Select(years);
 		 yr_drp.selectByVisibleText("2017");
-
+		 System.out.println("year is selected = 2017");
 
 			Thread.sleep(5000);
 		
@@ -55,6 +57,7 @@ public class DOB_Picker {
 			if(date.equals(dt))
 			{
 				ele.click();
+				System.out.println("Date is selected = 5");
 				break;
 			}
 		}

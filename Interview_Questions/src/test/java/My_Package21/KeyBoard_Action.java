@@ -18,18 +18,23 @@ public class KeyBoard_Action {
 		
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.ENTER).perform();
+		System.out.println("Enter key is pressed...");
 		Thread.sleep(2000);
 		
 		act.sendKeys(Keys.MULTIPLY).perform();
+		System.out.println("Multiply * key is pressed ...");
 		Thread.sleep(2000);
 		
 		act.sendKeys(Keys.ARROW_DOWN).perform();
+		System.out.println("Arrow down key is pressed...");
 		Thread.sleep(2000);
 		
 		act.sendKeys(Keys.ADD).perform();
+		System.out.println("Add key is pressed ...");
 		Thread.sleep(2000);
 		
 		act.sendKeys(Keys.BACK_SPACE).perform();
+		System.out.println("Back space key is pressed...");
 		Thread.sleep(2000);
 		
 		act.sendKeys(Keys.F5).perform();			

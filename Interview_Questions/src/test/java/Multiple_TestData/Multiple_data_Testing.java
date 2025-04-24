@@ -46,7 +46,6 @@ public class Multiple_data_Testing
 		driver.findElement(By.xpath("//input[@id='login-button']")).click();
 		Thread.sleep(3000);
 		
-		driver.close();
-		
+		driver.close();		
 	}
 }
