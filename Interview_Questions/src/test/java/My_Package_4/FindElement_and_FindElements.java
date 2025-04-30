@@ -44,6 +44,7 @@ public class FindElement_and_FindElements {
 
 		for (WebElement links : multiplelinks) 		
 		{
+			System.out.println("URl of Links :	"+links.getAttribute("href"));
 			System.out.println("Links name = "+links.getText());
 		}
 		

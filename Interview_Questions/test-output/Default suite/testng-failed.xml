@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="retryanalyzer.RetryTest">
+      <class name="Multiple_TestData.Data_Driven_Testing">
         <methods>
-          <include name="testRetry"/>
+          <include name="testLogin" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- retryanalyzer.RetryTest -->
+      </class> <!-- Multiple_TestData.Data_Driven_Testing -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

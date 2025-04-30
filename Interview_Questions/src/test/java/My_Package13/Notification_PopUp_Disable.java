@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Notification_PopUp {
+public class Notification_PopUp_Disable {
 
 	public static void main(String[] args) throws Throwable 
 	{

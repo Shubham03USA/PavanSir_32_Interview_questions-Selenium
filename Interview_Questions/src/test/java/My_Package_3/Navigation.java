@@ -24,7 +24,7 @@ public class Navigation {
 		System.out.println("Snapdeal opening 1st time...");
 		
 		driver.navigate().back();// amazon
-		System.out.println("Again Amzon open 2nd time...");
+		System.out.println("Again Amazon open 2nd time...");
 		
 		driver.navigate().forward();//snapDeal
 		

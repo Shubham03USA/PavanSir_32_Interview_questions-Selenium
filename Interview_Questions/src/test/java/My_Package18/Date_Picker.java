@@ -37,8 +37,7 @@ public class Date_Picker {
 			if(mon.equalsIgnoreCase(month) && yr.equals(year))
 				break;
 			else
-				driver.findElement(By.xpath("//span[@class='ui-icon ui-icon-circle-triangle-e']")).click();
-	
+				driver.findElement(By.xpath("//span[@class='ui-icon ui-icon-circle-triangle-e']")).click();	
 		}
 		
 		// Date Selection
